@@ -7,7 +7,7 @@ The motivation of the project was to refactor the e-commerce platform from Activ
 
 ## Screenshot of Deployed Site
 
-![image]( )
+![image](https://github.com/tcrear/redux-store/blob/main/client/build/images/Capture-22.JPG)
 
 
 ## Link to Deployed Site
