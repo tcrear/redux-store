@@ -74,19 +74,20 @@ function Detail() {
         purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1,
       });
     } else {
-      /* TODO: use the dispatcher to call the ADD_TO_CART reducer. It should 
-      pass in the current product under the variable name of product, and set 
-      the purchaseQuantity of that product to 1. */
-
+      dispatch({
+        type: ADD_TO_CART,
+        product: { ...currentProduct, purchaseQuantity: 1 },
+      });
 
       idbPromise('cart', 'put', { ...currentProduct, purchaseQuantity: 1 });
     }
   };
 
   const removeFromCart = () => {
-    /* TODO: use the dispatcher to call the REMOVE_FROM_CART reducer. It should 
-    pass in the _id of the product to be removed under the variable name of _id. */
-
+    dispatch({
+      type: REMOVE_FROM_CART,
+      _id: currentProduct._id,
+    });
 
     idbPromise('cart', 'delete', { ...currentProduct });
   };
